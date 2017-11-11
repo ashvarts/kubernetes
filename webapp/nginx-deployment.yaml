@@ -20,11 +20,11 @@ spec:
           ports:
           - containerPort: 80
           volumeMounts:
-            - name: "custom-index-html"
+            - name: custom-index-html
               mountPath: "/usr/share/nginx/html"
       volumes:
-        - name: custon-index-html
+        - name: custom-index-html
           configMap:
             # Provide the name of the ConfigMap containing the files you want
             # to add to the container
-            name: custon-index-html
+            name: custom-index-html
